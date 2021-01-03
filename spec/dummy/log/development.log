@@ -6742,3 +6742,424 @@ Processing by BetterTogether::Bt::Api::V1::RolesController#show_related_resource
 Completed 200 OK in 160ms (Views: 1.4ms | ActiveRecord: 58.3ms | Allocations: 44553)
 
 
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 03:25:11 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Bt::Api::V1::CommunitiesController#index as HTML
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT better_together_communities.id AS better_together_communities_id, better_together_communities.id FROM "better_together_communities" ORDER BY better_together_communities.id asc[0m
+  [1m[36mBetterTogether::Community Load (0.9ms)[0m  [1m[34mSELECT "better_together_communities".* FROM "better_together_communities" WHERE "better_together_communities"."id" IN ($1, $2, $3)[0m  [["id", 2], ["id", 9], ["id", 10]]
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "better_together_communities"[0m
+  [1m[36mMobility::ActiveRecord::StringTranslation Load (3.9ms)[0m  [1m[34mSELECT "mobility_string_translations".* FROM "mobility_string_translations" WHERE "mobility_string_translations"."translatable_id" = $1 AND "mobility_string_translations"."translatable_type" = $2 AND "mobility_string_translations"."key" IN ($3, $4)[0m  [["translatable_id", 2], ["translatable_type", "BetterTogether::Community"], ["key", "slug"], ["key", "name"]]
+  [1m[36mMobility::ActiveRecord::TextTranslation Load (3.3ms)[0m  [1m[34mSELECT "mobility_text_translations".* FROM "mobility_text_translations" WHERE "mobility_text_translations"."translatable_id" = $1 AND "mobility_text_translations"."translatable_type" = $2 AND "mobility_text_translations"."key" = $3[0m  [["translatable_id", 2], ["translatable_type", "BetterTogether::Community"], ["key", "description"]]
+  [1m[36mMobility::ActiveRecord::StringTranslation Load (1.5ms)[0m  [1m[34mSELECT "mobility_string_translations".* FROM "mobility_string_translations" WHERE "mobility_string_translations"."translatable_id" = $1 AND "mobility_string_translations"."translatable_type" = $2 AND "mobility_string_translations"."key" IN ($3, $4)[0m  [["translatable_id", 9], ["translatable_type", "BetterTogether::Community"], ["key", "slug"], ["key", "name"]]
+  [1m[36mMobility::ActiveRecord::TextTranslation Load (1.2ms)[0m  [1m[34mSELECT "mobility_text_translations".* FROM "mobility_text_translations" WHERE "mobility_text_translations"."translatable_id" = $1 AND "mobility_text_translations"."translatable_type" = $2 AND "mobility_text_translations"."key" = $3[0m  [["translatable_id", 9], ["translatable_type", "BetterTogether::Community"], ["key", "description"]]
+  [1m[36mMobility::ActiveRecord::StringTranslation Load (1.2ms)[0m  [1m[34mSELECT "mobility_string_translations".* FROM "mobility_string_translations" WHERE "mobility_string_translations"."translatable_id" = $1 AND "mobility_string_translations"."translatable_type" = $2 AND "mobility_string_translations"."key" IN ($3, $4)[0m  [["translatable_id", 10], ["translatable_type", "BetterTogether::Community"], ["key", "slug"], ["key", "name"]]
+  [1m[36mMobility::ActiveRecord::TextTranslation Load (1.0ms)[0m  [1m[34mSELECT "mobility_text_translations".* FROM "mobility_text_translations" WHERE "mobility_text_translations"."translatable_id" = $1 AND "mobility_text_translations"."translatable_type" = $2 AND "mobility_text_translations"."key" = $3[0m  [["translatable_id", 10], ["translatable_type", "BetterTogether::Community"], ["key", "description"]]
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 4)
+Completed 500 Internal Server Error in 127ms (Views: 0.7ms | ActiveRecord: 47.1ms | Allocations: 59785)
+
+
+
+Pundit::PolicyScopingNotPerformedError - BetterTogether::Bt::Api::V1::CommunitiesController:
+
+Started POST "/__better_errors/f403250c0fb04272/variables" for 172.30.0.1 at 2021-01-03 03:25:11 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 03:48:12 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+
+NoMethodError - undefined method `protect_from_forgery' for BetterTogether::ApiController:Class:
+
+Started POST "/__better_errors/df78c4eee21e06f6/variables" for 172.30.0.1 at 2021-01-03 03:48:13 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 03:48:25 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+
+NoMethodError - undefined method `respond_to' for BetterTogether::ApiController:Class:
+
+Started POST "/__better_errors/5428390ce147903f/variables" for 172.30.0.1 at 2021-01-03 03:48:25 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 03:48:31 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Bt::Api::V1::CommunitiesController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 5810)
+
+
+
+NameError - uninitialized constant BetterTogether::Bt::Api::V1::CommunitiesController::CommunityQuery:
+
+Started POST "/__better_errors/178867d516caf745/variables" for 172.30.0.1 at 2021-01-03 03:48:32 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 04:12:17 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Bt::Api::V1::CommunitiesController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 5789)
+
+
+
+NameError - uninitialized constant BetterTogether::Bt::Api::V1::CommunitiesController::CommunityQuery:
+
+Started POST "/__better_errors/5d34a6abca8fcdac/variables" for 172.30.0.1 at 2021-01-03 04:12:18 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 04:23:25 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+
+SyntaxError - syntax error, unexpected end, expecting end-of-input:
+
+Started POST "/__better_errors/839d0befdf173263/variables" for 172.30.0.1 at 2021-01-03 04:23:25 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 04:24:04 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+
+SyntaxError - syntax error, unexpected end, expecting end-of-input:
+
+Started POST "/__better_errors/10fb0d0323dc4e9a/variables" for 172.30.0.1 at 2021-01-03 04:24:04 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started POST "/__better_errors/10fb0d0323dc4e9a/variables" for 172.30.0.1 at 2021-01-03 04:24:07 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started POST "/__better_errors/10fb0d0323dc4e9a/variables" for 172.30.0.1 at 2021-01-03 04:24:09 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started POST "/__better_errors/10fb0d0323dc4e9a/variables" for 172.30.0.1 at 2021-01-03 04:24:11 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started POST "/__better_errors/10fb0d0323dc4e9a/variables" for 172.30.0.1 at 2021-01-03 04:24:12 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started POST "/__better_errors/10fb0d0323dc4e9a/variables" for 172.30.0.1 at 2021-01-03 04:24:16 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started POST "/__better_errors/10fb0d0323dc4e9a/variables" for 172.30.0.1 at 2021-01-03 04:24:26 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started POST "/__better_errors/10fb0d0323dc4e9a/variables" for 172.30.0.1 at 2021-01-03 04:24:35 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 04:25:15 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+
+SyntaxError - syntax error, unexpected end, expecting end-of-input:
+
+Started POST "/__better_errors/3591d8b0f86a2354/variables" for 172.30.0.1 at 2021-01-03 04:25:15 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 04:25:24 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+
+SyntaxError - syntax error, unexpected end, expecting end-of-input:
+
+Started POST "/__better_errors/5fa76629c372be6f/variables" for 172.30.0.1 at 2021-01-03 04:25:25 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 04:26:52 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+
+SyntaxError - syntax error, unexpected end, expecting end-of-input:
+
+Started POST "/__better_errors/b048092fac92589e/variables" for 172.30.0.1 at 2021-01-03 04:26:52 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 04:27:21 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 4793)
+
+
+
+NameError - uninitialized constant BetterTogether::Api::V1::CommunitiesController::CommunityQuery:
+
+Started POST "/__better_errors/4032b11ce2211449/variables" for 172.30.0.1 at 2021-01-03 04:27:21 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 04:27:43 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1931)
+
+
+
+NameError - uninitialized constant BetterTogether::CommunityQuery:
+
+Started POST "/__better_errors/986a9b02072d8efe/variables" for 172.30.0.1 at 2021-01-03 04:27:43 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 04:39:05 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#index as HTML
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 0.0ms | Allocations: 34637)
+
+
+
+NameError - undefined local variable or method `current_user' for #<BetterTogether::Api::V1::CommunitiesController:0x00007f17080eff08>:
+
+Started POST "/__better_errors/ba17a95fe283fc7f/variables" for 172.30.0.1 at 2021-01-03 04:39:06 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 04:49:55 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#index as HTML
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 0.0ms | Allocations: 23708)
+
+
+
+NameError - uninitialized constant Community:
+
+Started POST "/__better_errors/170dd2fea96456b3/variables" for 172.30.0.1 at 2021-01-03 04:49:55 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 04:50:25 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#index as HTML
+  [1m[35m (10.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT DISTINCT "better_together_communities"."id" FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id") subquery_for_count[0m
+  [1m[35mSQL (4.5ms)[0m  [1m[34mSELECT "better_together_communities"."id" AS t0_r0, "better_together_communities"."bt_id" AS t0_r1, "better_together_communities"."creator_id" AS t0_r2, "better_together_communities"."community_privacy" AS t0_r3, "better_together_communities"."lock_version" AS t0_r4, "better_together_communities"."created_at" AS t0_r5, "better_together_communities"."updated_at" AS t0_r6, "better_together_people"."id" AS t1_r0, "better_together_people"."bt_id" AS t1_r1, "better_together_people"."name" AS t1_r2, "better_together_people"."description" AS t1_r3, "better_together_people"."lock_version" AS t1_r4, "better_together_people"."created_at" AS t1_r5, "better_together_people"."updated_at" AS t1_r6 FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id" ORDER BY "better_together_communities"."created_at" ASC LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 22.7ms | Allocations: 46592)
+
+
+  [1m[35mCACHE SQL (0.0ms)[0m  [1m[34mSELECT "better_together_communities"."id" AS t0_r0, "better_together_communities"."bt_id" AS t0_r1, "better_together_communities"."creator_id" AS t0_r2, "better_together_communities"."community_privacy" AS t0_r3, "better_together_communities"."lock_version" AS t0_r4, "better_together_communities"."created_at" AS t0_r5, "better_together_communities"."updated_at" AS t0_r6, "better_together_people"."id" AS t1_r0, "better_together_people"."bt_id" AS t1_r1, "better_together_people"."name" AS t1_r2, "better_together_people"."description" AS t1_r3, "better_together_people"."lock_version" AS t1_r4, "better_together_people"."created_at" AS t1_r5, "better_together_people"."updated_at" AS t1_r6 FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id" ORDER BY "better_together_communities"."created_at" ASC LIMIT $1[0m  [["LIMIT", 11]]
+
+NoMethodError - undefined method `paginate' for #<BetterTogether::Community::ActiveRecord_Relation:0x0000563a329a8c70>:
+
+Started POST "/__better_errors/0284c7afd1b3b466/variables" for 172.30.0.1 at 2021-01-03 04:50:25 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 04:53:20 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#index as HTML
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT DISTINCT "better_together_communities"."id" FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id") subquery_for_count[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[34mSELECT "better_together_communities"."id" AS t0_r0, "better_together_communities"."bt_id" AS t0_r1, "better_together_communities"."creator_id" AS t0_r2, "better_together_communities"."community_privacy" AS t0_r3, "better_together_communities"."lock_version" AS t0_r4, "better_together_communities"."created_at" AS t0_r5, "better_together_communities"."updated_at" AS t0_r6, "better_together_people"."id" AS t1_r0, "better_together_people"."bt_id" AS t1_r1, "better_together_people"."name" AS t1_r2, "better_together_people"."description" AS t1_r3, "better_together_people"."lock_version" AS t1_r4, "better_together_people"."created_at" AS t1_r5, "better_together_people"."updated_at" AS t1_r6 FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id" ORDER BY "better_together_communities"."created_at" ASC LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.3ms | Allocations: 2459)
+
+
+  [1m[35mCACHE SQL (0.0ms)[0m  [1m[34mSELECT "better_together_communities"."id" AS t0_r0, "better_together_communities"."bt_id" AS t0_r1, "better_together_communities"."creator_id" AS t0_r2, "better_together_communities"."community_privacy" AS t0_r3, "better_together_communities"."lock_version" AS t0_r4, "better_together_communities"."created_at" AS t0_r5, "better_together_communities"."updated_at" AS t0_r6, "better_together_people"."id" AS t1_r0, "better_together_people"."bt_id" AS t1_r1, "better_together_people"."name" AS t1_r2, "better_together_people"."description" AS t1_r3, "better_together_people"."lock_version" AS t1_r4, "better_together_people"."created_at" AS t1_r5, "better_together_people"."updated_at" AS t1_r6 FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id" ORDER BY "better_together_communities"."created_at" ASC LIMIT $1[0m  [["LIMIT", 11]]
+
+NoMethodError - undefined method `paginate' for #<BetterTogether::Community::ActiveRecord_Relation:0x00007f170aae4c50>:
+
+Started POST "/__better_errors/a2e875669ae4d5f1/variables" for 172.30.0.1 at 2021-01-03 04:53:20 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 04:53:32 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#index as HTML
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT DISTINCT "better_together_communities"."id" FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id") subquery_for_count[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[34mSELECT "better_together_communities"."id" AS t0_r0, "better_together_communities"."bt_id" AS t0_r1, "better_together_communities"."creator_id" AS t0_r2, "better_together_communities"."community_privacy" AS t0_r3, "better_together_communities"."lock_version" AS t0_r4, "better_together_communities"."created_at" AS t0_r5, "better_together_communities"."updated_at" AS t0_r6, "better_together_people"."id" AS t1_r0, "better_together_people"."bt_id" AS t1_r1, "better_together_people"."name" AS t1_r2, "better_together_people"."description" AS t1_r3, "better_together_people"."lock_version" AS t1_r4, "better_together_people"."created_at" AS t1_r5, "better_together_people"."updated_at" AS t1_r6 FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id" ORDER BY "better_together_communities"."created_at" ASC LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 16.2ms | Allocations: 14563)
+
+
+  [1m[35mCACHE SQL (0.0ms)[0m  [1m[34mSELECT "better_together_communities"."id" AS t0_r0, "better_together_communities"."bt_id" AS t0_r1, "better_together_communities"."creator_id" AS t0_r2, "better_together_communities"."community_privacy" AS t0_r3, "better_together_communities"."lock_version" AS t0_r4, "better_together_communities"."created_at" AS t0_r5, "better_together_communities"."updated_at" AS t0_r6, "better_together_people"."id" AS t1_r0, "better_together_people"."bt_id" AS t1_r1, "better_together_people"."name" AS t1_r2, "better_together_people"."description" AS t1_r3, "better_together_people"."lock_version" AS t1_r4, "better_together_people"."created_at" AS t1_r5, "better_together_people"."updated_at" AS t1_r6 FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id" ORDER BY "better_together_communities"."created_at" ASC LIMIT $1[0m  [["LIMIT", 11]]
+
+NoMethodError - undefined method `paginate' for #<BetterTogether::Community::ActiveRecord_Relation:0x00007f84d80f04d8>:
+
+Started POST "/__better_errors/26e155c650792e77/variables" for 172.30.0.1 at 2021-01-03 04:53:33 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 04:55:49 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#index as HTML
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT DISTINCT "better_together_communities"."id" FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id") subquery_for_count[0m
+  [1m[35mSQL (4.2ms)[0m  [1m[34mSELECT "better_together_communities"."id" AS t0_r0, "better_together_communities"."bt_id" AS t0_r1, "better_together_communities"."creator_id" AS t0_r2, "better_together_communities"."community_privacy" AS t0_r3, "better_together_communities"."lock_version" AS t0_r4, "better_together_communities"."created_at" AS t0_r5, "better_together_communities"."updated_at" AS t0_r6, "better_together_people"."id" AS t1_r0, "better_together_people"."bt_id" AS t1_r1, "better_together_people"."name" AS t1_r2, "better_together_people"."description" AS t1_r3, "better_together_people"."lock_version" AS t1_r4, "better_together_people"."created_at" AS t1_r5, "better_together_people"."updated_at" AS t1_r6 FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id" ORDER BY "better_together_communities"."created_at" ASC LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 128ms (ActiveRecord: 12.2ms | Allocations: 44922)
+
+
+  [1m[35mCACHE SQL (0.1ms)[0m  [1m[34mSELECT "better_together_communities"."id" AS t0_r0, "better_together_communities"."bt_id" AS t0_r1, "better_together_communities"."creator_id" AS t0_r2, "better_together_communities"."community_privacy" AS t0_r3, "better_together_communities"."lock_version" AS t0_r4, "better_together_communities"."created_at" AS t0_r5, "better_together_communities"."updated_at" AS t0_r6, "better_together_people"."id" AS t1_r0, "better_together_people"."bt_id" AS t1_r1, "better_together_people"."name" AS t1_r2, "better_together_people"."description" AS t1_r3, "better_together_people"."lock_version" AS t1_r4, "better_together_people"."created_at" AS t1_r5, "better_together_people"."updated_at" AS t1_r6 FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id" ORDER BY "better_together_communities"."created_at" ASC LIMIT $1[0m  [["LIMIT", 11]]
+
+NoMethodError - undefined method `page' for #<BetterTogether::Community::ActiveRecord_Relation:0x00007f84d89b4920>:
+
+Started POST "/__better_errors/af63d8a3d5999aca/variables" for 172.30.0.1 at 2021-01-03 04:55:49 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 04:56:31 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#index as HTML
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT DISTINCT "better_together_communities"."id" FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id") subquery_for_count[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[34mSELECT "better_together_communities"."id" AS t0_r0, "better_together_communities"."bt_id" AS t0_r1, "better_together_communities"."creator_id" AS t0_r2, "better_together_communities"."community_privacy" AS t0_r3, "better_together_communities"."lock_version" AS t0_r4, "better_together_communities"."created_at" AS t0_r5, "better_together_communities"."updated_at" AS t0_r6, "better_together_people"."id" AS t1_r0, "better_together_people"."bt_id" AS t1_r1, "better_together_people"."name" AS t1_r2, "better_together_people"."description" AS t1_r3, "better_together_people"."lock_version" AS t1_r4, "better_together_people"."created_at" AS t1_r5, "better_together_people"."updated_at" AS t1_r6 FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id" ORDER BY "better_together_communities"."created_at" ASC LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 8.5ms | Allocations: 44872)
+
+
+  [1m[35mCACHE SQL (0.0ms)[0m  [1m[34mSELECT "better_together_communities"."id" AS t0_r0, "better_together_communities"."bt_id" AS t0_r1, "better_together_communities"."creator_id" AS t0_r2, "better_together_communities"."community_privacy" AS t0_r3, "better_together_communities"."lock_version" AS t0_r4, "better_together_communities"."created_at" AS t0_r5, "better_together_communities"."updated_at" AS t0_r6, "better_together_people"."id" AS t1_r0, "better_together_people"."bt_id" AS t1_r1, "better_together_people"."name" AS t1_r2, "better_together_people"."description" AS t1_r3, "better_together_people"."lock_version" AS t1_r4, "better_together_people"."created_at" AS t1_r5, "better_together_people"."updated_at" AS t1_r6 FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id" ORDER BY "better_together_communities"."created_at" ASC LIMIT $1[0m  [["LIMIT", 11]]
+
+NoMethodError - undefined method `paginate' for #<BetterTogether::Community::ActiveRecord_Relation:0x000055c36dedcd40>:
+
+Started POST "/__better_errors/c2c6c412d7a3ea1f/variables" for 172.30.0.1 at 2021-01-03 04:56:31 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 04:56:43 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#index as HTML
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT DISTINCT "better_together_communities"."id" FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id") subquery_for_count[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[34mSELECT "better_together_communities"."id" AS t0_r0, "better_together_communities"."bt_id" AS t0_r1, "better_together_communities"."creator_id" AS t0_r2, "better_together_communities"."community_privacy" AS t0_r3, "better_together_communities"."lock_version" AS t0_r4, "better_together_communities"."created_at" AS t0_r5, "better_together_communities"."updated_at" AS t0_r6, "better_together_people"."id" AS t1_r0, "better_together_people"."bt_id" AS t1_r1, "better_together_people"."name" AS t1_r2, "better_together_people"."description" AS t1_r3, "better_together_people"."lock_version" AS t1_r4, "better_together_people"."created_at" AS t1_r5, "better_together_people"."updated_at" AS t1_r6 FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id" ORDER BY "better_together_communities"."created_at" ASC LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 14.6ms | Allocations: 14563)
+
+
+  [1m[35mCACHE SQL (0.0ms)[0m  [1m[34mSELECT "better_together_communities"."id" AS t0_r0, "better_together_communities"."bt_id" AS t0_r1, "better_together_communities"."creator_id" AS t0_r2, "better_together_communities"."community_privacy" AS t0_r3, "better_together_communities"."lock_version" AS t0_r4, "better_together_communities"."created_at" AS t0_r5, "better_together_communities"."updated_at" AS t0_r6, "better_together_people"."id" AS t1_r0, "better_together_people"."bt_id" AS t1_r1, "better_together_people"."name" AS t1_r2, "better_together_people"."description" AS t1_r3, "better_together_people"."lock_version" AS t1_r4, "better_together_people"."created_at" AS t1_r5, "better_together_people"."updated_at" AS t1_r6 FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id" ORDER BY "better_together_communities"."created_at" ASC LIMIT $1[0m  [["LIMIT", 11]]
+
+NoMethodError - undefined method `paginate' for #<BetterTogether::Community::ActiveRecord_Relation:0x00007f36cc0ff730>:
+
+Started POST "/__better_errors/8ec9513b1c399c7a/variables" for 172.30.0.1 at 2021-01-03 04:56:43 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 04:57:15 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#index as HTML
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT DISTINCT "better_together_communities"."id" FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id") subquery_for_count[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[34mSELECT "better_together_communities"."id" AS t0_r0, "better_together_communities"."bt_id" AS t0_r1, "better_together_communities"."creator_id" AS t0_r2, "better_together_communities"."community_privacy" AS t0_r3, "better_together_communities"."lock_version" AS t0_r4, "better_together_communities"."created_at" AS t0_r5, "better_together_communities"."updated_at" AS t0_r6, "better_together_people"."id" AS t1_r0, "better_together_people"."bt_id" AS t1_r1, "better_together_people"."name" AS t1_r2, "better_together_people"."description" AS t1_r3, "better_together_people"."lock_version" AS t1_r4, "better_together_people"."created_at" AS t1_r5, "better_together_people"."updated_at" AS t1_r6 FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id" ORDER BY "better_together_communities"."created_at" ASC LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.1ms | Allocations: 2459)
+
+
+  [1m[35mCACHE SQL (0.0ms)[0m  [1m[34mSELECT "better_together_communities"."id" AS t0_r0, "better_together_communities"."bt_id" AS t0_r1, "better_together_communities"."creator_id" AS t0_r2, "better_together_communities"."community_privacy" AS t0_r3, "better_together_communities"."lock_version" AS t0_r4, "better_together_communities"."created_at" AS t0_r5, "better_together_communities"."updated_at" AS t0_r6, "better_together_people"."id" AS t1_r0, "better_together_people"."bt_id" AS t1_r1, "better_together_people"."name" AS t1_r2, "better_together_people"."description" AS t1_r3, "better_together_people"."lock_version" AS t1_r4, "better_together_people"."created_at" AS t1_r5, "better_together_people"."updated_at" AS t1_r6 FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id" ORDER BY "better_together_communities"."created_at" ASC LIMIT $1[0m  [["LIMIT", 11]]
+
+NoMethodError - undefined method `paginate' for #<BetterTogether::Community::ActiveRecord_Relation:0x00007f36cc579ce8>:
+
+Started POST "/__better_errors/72cfe5d569d67f3b/variables" for 172.30.0.1 at 2021-01-03 04:57:15 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started POST "/__better_errors/72cfe5d569d67f3b/variables" for 172.30.0.1 at 2021-01-03 04:57:31 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35mSQL (3.2ms)[0m  [1m[34mSELECT "better_together_communities"."id" AS t0_r0, "better_together_communities"."bt_id" AS t0_r1, "better_together_communities"."creator_id" AS t0_r2, "better_together_communities"."community_privacy" AS t0_r3, "better_together_communities"."lock_version" AS t0_r4, "better_together_communities"."created_at" AS t0_r5, "better_together_communities"."updated_at" AS t0_r6, "better_together_people"."id" AS t1_r0, "better_together_people"."bt_id" AS t1_r1, "better_together_people"."name" AS t1_r2, "better_together_people"."description" AS t1_r3, "better_together_people"."lock_version" AS t1_r4, "better_together_people"."created_at" AS t1_r5, "better_together_people"."updated_at" AS t1_r6 FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id" ORDER BY "better_together_communities"."created_at" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35mSQL (1.4ms)[0m  [1m[34mSELECT "better_together_communities"."id" AS t0_r0, "better_together_communities"."bt_id" AS t0_r1, "better_together_communities"."creator_id" AS t0_r2, "better_together_communities"."community_privacy" AS t0_r3, "better_together_communities"."lock_version" AS t0_r4, "better_together_communities"."created_at" AS t0_r5, "better_together_communities"."updated_at" AS t0_r6, "better_together_people"."id" AS t1_r0, "better_together_people"."bt_id" AS t1_r1, "better_together_people"."name" AS t1_r2, "better_together_people"."description" AS t1_r3, "better_together_people"."lock_version" AS t1_r4, "better_together_people"."created_at" AS t1_r5, "better_together_people"."updated_at" AS t1_r6 FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 05:02:57 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#index as HTML
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT DISTINCT "better_together_communities"."id" FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id") subquery_for_count[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[34mSELECT "better_together_communities"."id" AS t0_r0, "better_together_communities"."bt_id" AS t0_r1, "better_together_communities"."creator_id" AS t0_r2, "better_together_communities"."community_privacy" AS t0_r3, "better_together_communities"."lock_version" AS t0_r4, "better_together_communities"."created_at" AS t0_r5, "better_together_communities"."updated_at" AS t0_r6, "better_together_people"."id" AS t1_r0, "better_together_people"."bt_id" AS t1_r1, "better_together_people"."name" AS t1_r2, "better_together_people"."description" AS t1_r3, "better_together_people"."lock_version" AS t1_r4, "better_together_people"."created_at" AS t1_r5, "better_together_people"."updated_at" AS t1_r6 FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id" ORDER BY "better_together_communities"."created_at" ASC LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 15.7ms | Allocations: 14563)
+
+
+  [1m[35mCACHE SQL (0.0ms)[0m  [1m[34mSELECT "better_together_communities"."id" AS t0_r0, "better_together_communities"."bt_id" AS t0_r1, "better_together_communities"."creator_id" AS t0_r2, "better_together_communities"."community_privacy" AS t0_r3, "better_together_communities"."lock_version" AS t0_r4, "better_together_communities"."created_at" AS t0_r5, "better_together_communities"."updated_at" AS t0_r6, "better_together_people"."id" AS t1_r0, "better_together_people"."bt_id" AS t1_r1, "better_together_people"."name" AS t1_r2, "better_together_people"."description" AS t1_r3, "better_together_people"."lock_version" AS t1_r4, "better_together_people"."created_at" AS t1_r5, "better_together_people"."updated_at" AS t1_r6 FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id" ORDER BY "better_together_communities"."created_at" ASC LIMIT $1[0m  [["LIMIT", 11]]
+
+NoMethodError - undefined method `paginate' for #<BetterTogether::Community::ActiveRecord_Relation:0x00007ff9c80f45c8>:
+
+Started POST "/__better_errors/f1f560ee73c9881b/variables" for 172.30.0.1 at 2021-01-03 05:02:58 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 05:03:51 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#index as HTML
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT DISTINCT "better_together_communities"."id" FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id") subquery_for_count[0m
+Completed 200 OK in 27ms (Views: 0.1ms | ActiveRecord: 17.9ms | Allocations: 3605)
+
+
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 05:03:55 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#index as HTML
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT DISTINCT "better_together_communities"."id" FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id") subquery_for_count[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 784)
+
+
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 05:04:18 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#index as HTML
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT DISTINCT "better_together_communities"."id" FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id") subquery_for_count[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 784)
+
+
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 05:05:13 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#index as HTML
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT DISTINCT "better_together_communities"."id" FROM "better_together_communities" LEFT OUTER JOIN "better_together_people" ON "better_together_people"."id" = "better_together_communities"."creator_id") subquery_for_count[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 804)
+
+
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 05:25:38 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+
+LoadError - No such file to load -- better_together/resource_controller.rb:
+
+Started POST "/__better_errors/a7e3b965a3384219/variables" for 172.30.0.1 at 2021-01-03 05:25:38 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 05:26:10 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 3767)
+
+
+
+NameError - uninitialized constant BetterTogether::CommunityMembershipQuery:
+
+Started POST "/__better_errors/8ae6035197a6eb48/variables" for 172.30.0.1 at 2021-01-03 05:26:10 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 05:26:36 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+
+TypeError - superclass mismatch for class ResourceController:
+
+Started POST "/__better_errors/78542231efc82325/variables" for 172.30.0.1 at 2021-01-03 05:26:36 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started POST "/__better_errors/78542231efc82325/variables" for 172.30.0.1 at 2021-01-03 05:26:56 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 05:27:47 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+
+TypeError - Api is not a class:
+
+Started POST "/__better_errors/65b98b4fcb75fa9f/variables" for 172.30.0.1 at 2021-01-03 05:27:47 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 05:28:42 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+
+TypeError - Api is not a class:
+
+Started POST "/__better_errors/85ecff3f4a4e5116/variables" for 172.30.0.1 at 2021-01-03 05:28:42 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 05:45:11 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#index as HTML
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "better_together_communities"[0m
+Completed 200 OK in 41ms (Views: 0.1ms | ActiveRecord: 4.9ms | Allocations: 24559)
+
+
+Started GET "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 06:01:31 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#index as 
+  Parameters: {"community"=>{}}
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "better_together_communities"[0m
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 2.7ms | Allocations: 3100)
+
+
+Started POST "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 06:04:13 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#create as 
+Completed 400 Bad Request in 315ms (ActiveRecord: 0.0ms | Allocations: 66360)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: community:
+
+Started POST "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 06:08:37 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+
+NameError - uninitialized constant BetterTogether::JSONAPI::Deserializable:
+
+Started POST "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 06:22:45 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#create as 
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1130)
+
+
+
+JSONAPI::Parser::InvalidDocument - The request MUST include a single resource object as primary data.:
+
+Started POST "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 06:23:46 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+
+NoMethodError - undefined method `deserializable_resource' for BetterTogether::Api::V1::CommunitiesController:Class:
+
+Started POST "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 06:25:28 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+
+NoMethodError - undefined method `deserializable_resource' for BetterTogether::Api::V1::CommunitiesController:Class:
+
+Started POST "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 06:26:44 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+
+SyntaxError - syntax error, unexpected end, expecting end-of-input:
+
+Started POST "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 06:27:14 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+
+NoMethodError - undefined method `deserializable_resource' for BetterTogether::Api::V1::CommunitiesController:Class:
+
+Started POST "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 06:29:33 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#create as 
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1130)
+
+
+
+JSONAPI::Parser::InvalidDocument - The request MUST include a single resource object as primary data.:
+
+Started POST "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 06:37:34 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#create as 
+Completed 500 Internal Server Error in 366ms (ActiveRecord: 0.0ms | Allocations: 66739)
+
+
+
+JSONAPI::Parser::InvalidDocument - The request MUST include a single resource object as primary data.:
+
+Started POST "/bt/api/v1/communities" for 172.30.0.1 at 2021-01-03 06:38:09 +0000
+Cannot render console from 172.30.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BetterTogether::Api::V1::CommunitiesController#create as 
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 3374)
+
+
+
+JSONAPI::Parser::InvalidDocument - The request MUST include a single resource object as primary data.:
+

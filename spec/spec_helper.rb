@@ -14,8 +14,9 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
-require 'simplecov'
 require 'coveralls'
+require 'jsonapi/rspec'
+require 'simplecov'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(
   [

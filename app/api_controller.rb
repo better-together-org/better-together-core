@@ -1,11 +1,9 @@
 
-require_dependency 'better_together/api/error_codes'
-require_dependency 'better_together/api/error'
-require_dependency 'jsonapi/parser'
-
 module BetterTogether
   class ApiController < ActionController::API
     include Pundit
+    # after_action :verify_authorized, except: :index
+    # after_action :verify_policy_scoped, only: :index
 
     rescue_from ActiveRecord::RecordNotFound, with: -> { render json: { error: 'Not found' }, status: :not_found }
     rescue_from Pundit::NotAuthorizedError, with: :reject_forbidden_request
@@ -20,7 +18,6 @@ module BetterTogether
 
       before_action(options) do |controller|
         hash = controller.params.to_unsafe_hash.slice(:data)
-        byebug
 
         if hash.nil?
           JSONAPI::Rails.logger.warn do
@@ -42,11 +39,13 @@ module BetterTogether
       end
     end
 
+
+
     def reject_forbidden_request(error)
       type = error.record.class.name.underscore.humanize(capitalize: false)
       human_action = params[:action].humanize(capitalize: false)
-      error = BetterTogether::Api::Error.new(
-        code: BetterTogether::Api::FORBIDDEN,
+      error = JSONAPI::Error.new(
+        code: JSONAPI::FORBIDDEN,
         status: :forbidden,
         title: "#{human_action.titleize} Forbidden",
         detail: "You don't have permission to #{human_action} this #{type}.",
@@ -56,10 +55,6 @@ module BetterTogether
     end
 
     protected
-
-    def current_user
-      nil
-    end
 
     def available_filters
       raise ::NoMethodError, 'you must override this method in the subclass to provide the available filters as an array of symbols'

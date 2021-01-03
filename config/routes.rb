@@ -3,24 +3,13 @@ BetterTogether::Engine.routes.draw do
     get '/' => 'static_pages#home'
   end
 
-  namespace :bt do
+  scope path: :bt do
     namespace :api do
       namespace :v1 do
-        jsonapi_resources :communities do
-          jsonapi_relationships
-        end
-
-        jsonapi_resources :community_memberships do
-          jsonapi_relationships
-        end
-
-        jsonapi_resources :people do
-          jsonapi_relationships
-        end
-
-        jsonapi_resources :roles do
-          jsonapi_relationships
-        end
+        resources :communities, except: %i[new edit]
+        resources :community_memberships, except: %i[new edit]
+        resources :people, except: %i[new edit]
+        resources :roles, except: %i[new edit]
       end
     end
   end

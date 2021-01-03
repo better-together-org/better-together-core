@@ -4,10 +4,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gemspec
 
 group :development, :test do
+  gem 'byebug'
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'pry'
   gem 'rswag'
+  gem 'will_paginate'
 end
 
 group :test do
