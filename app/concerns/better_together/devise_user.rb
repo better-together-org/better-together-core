@@ -4,6 +4,7 @@ module BetterTogether
   # Represents a devise-powered user model 
   module DeviseUser
     extend ActiveSupport::Concern
+    include ::BetterTogether::Agent
 
     included do
       # override devise method to include additional info as opts hash
