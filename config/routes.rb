@@ -18,23 +18,23 @@ BetterTogether::Engine.routes.draw do
     namespace :api, defaults: { format: :json } do
       namespace :v1 do
 
-        jsonapi_resources :communities do
-          # jsonapi_relationships
-        end
+        # jsonapi_resources :communities do
+        #   # jsonapi_relationships
+        # end
 
-        jsonapi_resources :community_memberships do
-          # jsonapi_relationships
-        end
+        # jsonapi_resources :community_memberships do
+        #   # jsonapi_relationships
+        # end
 
-        get 'people/me', to: 'people#me'
+        # get 'people/me', to: 'people#me'
 
-        jsonapi_resources :people do
-          # jsonapi_relationships
-        end
+        # jsonapi_resources :people do
+        #   # jsonapi_relationships
+        # end
 
-        jsonapi_resources :roles do
-          # jsonapi_relationships
-        end
+        # jsonapi_resources :roles do
+        #   # jsonapi_relationships
+        # end
       end
     end
   end

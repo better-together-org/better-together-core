@@ -14,7 +14,7 @@ module BetterTogether
       require_dependency 'friendly_id'
       require_dependency 'mobility'
       require_dependency 'friendly_id/mobility'
-      require_dependency 'jsonapi-resources'
+      require_dependency 'jsonapi/rails'
       require_dependency 'pundit'
       require_dependency 'rack/cors'
     end
